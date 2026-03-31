@@ -144,7 +144,7 @@ if ($_POST) {  // Check if form submitted
 
                         // Add updated products
                         $stmt = mysqli_prepare($conn, "INSERT INTO form_products (form_id, name, qty, price) VALUES (?, ?, ?, ?)");
-                        foreach ($valid_products Ascending($valid_products as $prod) {
+                        foreach ($valid_products as $prod) {
                             mysqli_stmt_bind_param($stmt, "isid", $id, $prod[0], $prod[1], $prod[2]);
                             mysqli_stmt_execute($stmt);
                         }
